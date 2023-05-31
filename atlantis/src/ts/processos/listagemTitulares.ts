@@ -1,6 +1,6 @@
 import Processo from "../abstracoes/processo";
 import Armazem from "../dominio/armazem";
-import ImpressaorCliente from "../impressores/impressorCliente";
+import ImpressorCliente from "../impressores/impressorCliente";
 import Impressor from "../interfaces/impressor";
 import Cliente from "../modelos/cliente";
 
@@ -13,10 +13,14 @@ export default class ListagemTitulares extends Processo {
     }
     processar(): void {
         console.clear()
-        console.log('Iniciando a listagem dos clientes titulares...')
+        console.log('\nIniciando a listagem dos clientes titulares...\n')
+        if (this.clientes.length == 0) {
+            console.clear()
+            console.log("Não há clientes no momento!");
+        }
         this.clientes.forEach(cliente => {
             if (this.titular(cliente)) {
-                this.impressor = new ImpressaorCliente(cliente)
+                this.impressor = new ImpressorCliente(cliente)
                 console.log(this.impressor.imprimir())
             }
         })

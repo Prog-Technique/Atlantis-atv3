@@ -4,14 +4,14 @@ import ImpressorTelefones from "./impressorTelefones";
 import ImpressorEndereco from "./impressorEndereco";
 import ImpressorDocumentos from "./impressorDocumentos";
 
-export default class ImpressorCliente implements Impressor {
+export default class ImpressorDependente implements Impressor {
     private cliente: Cliente
     private impressor!: Impressor
 
     constructor(cliente: Cliente) {
         this.cliente = cliente
     }
-
+    
     imprimir(): string {
         let impressao = `****************************\n`
             + `| Nome: ${this.cliente.Nome}\n`

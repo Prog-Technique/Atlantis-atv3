@@ -1,6 +1,6 @@
-import Processo from "../abstracoes/processo";
-import Cliente from "../modelos/cliente";
-import Endereco from "../modelos/endereco";
+import Processo from "../../abstracoes/processo";
+import Cliente from "../../modelos/cliente";
+import Endereco from "../../modelos/endereco";
 
 export default class CadastroEnderecoTitular extends Processo {
     private cliente: Cliente
@@ -11,7 +11,7 @@ export default class CadastroEnderecoTitular extends Processo {
     }
 
     processar(): void {
-        console.log('Coletando os dados de endereço...')
+        console.log('\nColetando os dados de endereço...\n')
         let rua = this.entrada.receberTexto('Qual a rua?')
         let bairro = this.entrada.receberTexto('Qual o bairro?')
         let cidade = this.entrada.receberTexto('Qual a cidade?')
