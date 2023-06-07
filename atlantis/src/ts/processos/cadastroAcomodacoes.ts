@@ -15,18 +15,17 @@ export default class CadastroAcomodacoes extends Processo {
         super()
         this.acomodacoes = Armazem.InstanciaUnica.Acomodacoes
     }
+
     processar(): void {
         let diretor = new DiretorSolteiroSimples()
         this.acomodacoes.push(diretor.construir())
 
-        
         diretor = new DiretorCasalSimples()
         this.acomodacoes.push(diretor.construir())
 
         diretor = new DiretorFamiliaSimples()
         this.acomodacoes.push(diretor.construir())
 
-        
         diretor = new DiretorFamiliaMais()
         this.acomodacoes.push(diretor.construir())
 

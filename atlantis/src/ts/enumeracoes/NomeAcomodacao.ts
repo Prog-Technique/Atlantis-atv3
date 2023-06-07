@@ -1,4 +1,4 @@
-export enum NomeAcomadacao {
+export enum NomeAcomodacao {
     SolteiroSimples = 'Acomodação simples para solteiro(a)',
     CasalSimples = 'Acomodação simples para casal',
     FamiliaSimples = 'Acomodação para família com até duas crianças',

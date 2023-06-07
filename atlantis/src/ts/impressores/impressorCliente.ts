@@ -3,6 +3,7 @@ import Cliente from "../modelos/cliente";
 import ImpressorTelefones from "./impressorTelefones";
 import ImpressorEndereco from "./impressorEndereco";
 import ImpressorDocumentos from "./impressorDocumentos";
+import ImpressorAcomodacao from "./impressorAcomodacao";
 
 export default class ImpressorCliente implements Impressor {
     private cliente: Cliente
@@ -27,6 +28,9 @@ export default class ImpressorCliente implements Impressor {
 
         this.impressor = new ImpressorDocumentos(this.cliente.Documentos)
         impressao = impressao + `\n${this.impressor.imprimir()}`
+
+        this.impressor = new ImpressorAcomodacao(this.cliente.Acomodacao);
+        impressao = impressao + `\n${this.impressor.imprimir()}`;
 
         impressao = impressao + `\n****************************`
         return impressao
