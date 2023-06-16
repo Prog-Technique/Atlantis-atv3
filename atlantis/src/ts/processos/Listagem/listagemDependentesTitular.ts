@@ -1,10 +1,10 @@
-import Processo from "../abstracoes/processo";
-import Armazem from "../dominio/armazem";
-import ImpressorDependente from "../impressores/impressorDependente";
-import Impressor from "../interfaces/impressor";
-import Cliente from "../modelos/cliente";
+import Processo from "../../abstracoes/processo";
+import Armazem from "../../dominio/armazem";
+import ImpressorDependente from "../../impressores/impressorDependente";
+import Impressor from "../../interfaces/impressor";
+import Cliente from "../../modelos/cliente";
 
-export default class ListagemDependentes extends Processo {
+export default class ListagemDependentesTitular extends Processo {
     private clientes: Cliente[]
     private impressor!: Impressor
     constructor() {
@@ -14,8 +14,8 @@ export default class ListagemDependentes extends Processo {
 
     processar(): void {
         console.clear();
-        let titular = this.entrada.receberTexto(`Qual o CPF do titular?`);
-        console.log("Iniciando a listagem dos clientes dependentes...");
+        let titular = this.entrada.receberTexto(`Qual o CPF do titular? `);
+        console.log("Iniciando a listagem dos dependentes de um titular específico...");
         
         this.clientes.map((clienteMap) => {
           clienteMap.Documentos.filter((docFilter) => {

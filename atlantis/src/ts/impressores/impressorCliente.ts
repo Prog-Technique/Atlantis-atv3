@@ -24,7 +24,7 @@ export default class ImpressorCliente implements Impressor {
         impressao = impressao + `\n${this.impressor.imprimir()}`
 
         this.impressor = new ImpressorEndereco(this.cliente.Endereco)
-        impressao = impressao + `${this.impressor.imprimir()}`
+        impressao = impressao + `\n${this.impressor.imprimir()}`
 
         this.impressor = new ImpressorDocumentos(this.cliente.Documentos)
         impressao = impressao + `\n${this.impressor.imprimir()}`
