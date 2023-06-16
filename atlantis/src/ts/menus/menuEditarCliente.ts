@@ -17,6 +17,7 @@ export default class MenuEditarCliente implements Menu {
     console.log(`----------------------`);
     console.log(`| 7 - Telefones`);
     console.log(`| 8 - Documentos`);
+    console.log(`| 9 - Acomodações`);
     console.log(`| 0 - Finalizar edição/adição`)
     console.log(`----------------------`);
   }

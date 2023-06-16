@@ -13,6 +13,7 @@ import EditarTelefone from "./editarTelefone";
 
 import CadastrarTelefonesCliente from "../CadastrarCliente/cadastrarTelefonesCliente";
 import CadastrarDocumentosCliente from "../CadastrarCliente/cadastrarDocumentosCliente";
+import CadastroClienteAcomodacao from "../cadastroClienteAcomodacao";
 
 export default class EdicaoClienteTitular extends Processo {
   private clientes: Cliente[];
@@ -68,6 +69,10 @@ export default class EdicaoClienteTitular extends Processo {
                 break;
               case 8:
                 this.processo = new CadastrarDocumentosCliente(clienteForEach);
+                this.processo.processar();
+                break;
+              case 9:
+                this.processo = new CadastroClienteAcomodacao(clienteForEach);
                 this.processo.processar();
                 break;
               case 0:
