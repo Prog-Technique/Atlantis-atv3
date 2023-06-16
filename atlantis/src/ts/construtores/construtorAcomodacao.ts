@@ -3,7 +3,7 @@ import Construtor from "../interfaces/construtor";
 import Acomodacao from "../modelos/acomodacao";
 
 export default class ConstrutorAcomodacao implements Construtor<Acomodacao>{
-    private nomeAcomodacao: NomeAcomodacao = NomeAcomodacao.SolteiroSimples
+    private nomeAcomodacao: NomeAcomodacao = NomeAcomodacao.CasalSimples
     private camaSolteiro: Number = 0
     private camaCasal: Number = 0
     private suite: Number = 0
